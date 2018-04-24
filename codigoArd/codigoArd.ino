@@ -6,7 +6,7 @@ void setup() {
   Serial.begin(9600);
   Serial.println("Iniciando arduino");
 }
-void GuardarDatos()
+void GuardarDatos();
 {
 EEPROM.write(x, contador);
 }
@@ -17,6 +17,7 @@ void loop() {
   {
     contador = contador + 1;
     
+    GUardarDatos();
     
     delay(500);
   }
@@ -26,7 +27,7 @@ void loop() {
     if (orden == 'R')
     {
     contador=0;
-      
+      GuardarDatos();
     } else if(orden == 'M')
   {
     Serial.println(contador);
