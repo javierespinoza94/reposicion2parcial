@@ -1,4 +1,4 @@
-
+#include <EEPROM.h>
 int contador=0;
 void setup() {
   pinMode(boton, INPUT_PULLUP);
