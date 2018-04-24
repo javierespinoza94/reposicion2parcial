@@ -6,8 +6,11 @@ void setup() {
   Serial.begin(9600);
   Serial.println("Iniciando arduino");
 }
-
-
+void GuardarDatos()
+{
+EEPROM.write(x, contador);
+}
+contador = EEPROM.read(x);
 
 void loop() {
   if (digitalRead(boton) == 1 )
